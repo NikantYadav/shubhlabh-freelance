@@ -1138,6 +1138,7 @@ textarea{height:110px;resize:vertical}
 .logo-a{text-decoration:none;display:flex;align-items:center}
 .logo-pill{display:flex;align-items:center;gap:10px;padding:5px 10px;border-radius:10px}
 .logo-img{height:30px;width:auto}
+.logo-img-full{height:44px;width:auto}
 .lname{font-size:15px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
 .ltag{display:none}
 @media(min-width:480px){.ltag{display:block;font-size:9px;font-weight:600;color:#00A99D;letter-spacing:.08em;text-transform:uppercase;margin-top:1px}}

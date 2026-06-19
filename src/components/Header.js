@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import logo from '../assets/logo.png';
 
 const PAGE_TO_PATH = {
   index: '/',
@@ -39,13 +38,7 @@ export default function Header({ hidden, onToggleDrawer }) {
 
           {/* Logo */}
           <a onClick={() => nav('index')} className="logo-a" aria-label="Shubhlabh Express">
-            <div className="logo-pill" style={{ background: '#fff' }}>
-              <img src={logo} className="logo-img" width="30" height="30" alt="Shubhlabh Express" />
-              <div className="logo-txt">
-                <b className="lname" style={{ color: '#0A1628' }}>Shubhlabh Express</b>
-                <span className="ltag">Prosperity in Motion</span>
-              </div>
-            </div>
+            <img src="/Shubhlabp Logo.png" className="logo-img-full" alt="Shubhlabh Express" />
           </a>
 
           {/* Desktop nav links */}
