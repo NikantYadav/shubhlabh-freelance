@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import Footer from '../components/Footer';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 
@@ -17,6 +18,8 @@ export default function Distribute() {
   const [errors, setErrors] = useState([]);
   const [showErrors, setShowErrors] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [sendError, setSendError] = useState('');
   const errRef = useRef(null);
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -45,16 +48,37 @@ export default function Distribute() {
       return;
     }
     setShowErrors(false);
-
-    var body =
-      'Name: ' + name + '\nCompany: ' + company + '\nPhone: ' + phone + '\nEmail: ' + email + '\nCategory: ' + cat + '\nVolume: ' + (form.vol || 'Not specified') + '\n\nRequirements:\n' + msg;
-    window.location.href =
-      'mailto:contact@shublabh.ltd?subject=Distribution Enquiry – ' + encodeURIComponent(company) + '&body=' + encodeURIComponent(body);
-
+    setSendError('');
     setSubmitting(true);
-    setTimeout(function () {
-      setSubmitting(false);
-    }, 5000);
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          name: name,
+          company: company,
+          phone: phone,
+          email: email,
+          category: cat,
+          volume: form.vol || 'Not specified',
+          message: msg,
+          to_email: process.env.REACT_APP_TO_EMAIL,
+        },
+        { publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY }
+      )
+      .then(function () {
+        setSubmitting(false);
+        setSent(true);
+        setTimeout(function () {
+          setSent(false);
+        }, 5000);
+      })
+      .catch(function (err) {
+        setSubmitting(false);
+        setSendError('Something went wrong sending your enquiry. Please try again or email us directly.');
+        console.error('EmailJS error:', err);
+      });
   };
 
   return (
@@ -93,11 +117,18 @@ export default function Distribute() {
               ))}
             </ul>
           </div>
-          <button id="sb" className="btn btn-t" style={{ width: '100%', justifyContent: 'center', background: submitting ? 'linear-gradient(135deg,#007A72,#005F5A)' : '' }} onClick={doSubmit} disabled={submitting}>
-            {submitting ? (
+          {sendError && (
+            <div style={{ background: '#FFF0F0', border: '1.5px solid #F87171', borderRadius: 9, padding: '12px 14px', fontSize: 13, color: '#B91C1C', marginBottom: 12 }}>
+              {sendError}
+            </div>
+          )}
+          <button id="sb" className="btn btn-t" style={{ width: '100%', justifyContent: 'center', background: submitting || sent ? 'linear-gradient(135deg,#007A72,#005F5A)' : '' }} onClick={doSubmit} disabled={submitting}>
+            {sent ? (
               <>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg> Enquiry Drafted — Opening Your Email App
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg> Enquiry Sent — We'll Be in Touch
               </>
+            ) : submitting ? (
+              <>Sending…</>
             ) : (
               <>
                 Send Enquiry <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg>

@@ -22,7 +22,15 @@ if [ "$LOCAL" != "$REMOTE" ]; then
 fi
 
 echo "Building image..."
-docker build -t "$IMAGE_NAME:latest" .
+set -a
+source .env
+set +a
+docker build \
+    --build-arg REACT_APP_EMAILJS_PUBLIC_KEY="$REACT_APP_EMAILJS_PUBLIC_KEY" \
+    --build-arg REACT_APP_EMAILJS_SERVICE_ID="$REACT_APP_EMAILJS_SERVICE_ID" \
+    --build-arg REACT_APP_EMAILJS_TEMPLATE_ID="$REACT_APP_EMAILJS_TEMPLATE_ID" \
+    --build-arg REACT_APP_TO_EMAIL="$REACT_APP_TO_EMAIL" \
+    -t "$IMAGE_NAME:latest" .
 
 echo "Restarting container..."
 docker rm -f "$CONTAINER_NAME" >/dev/null 2>&1 || true
