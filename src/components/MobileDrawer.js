@@ -19,7 +19,7 @@ export default function MobileDrawer({ open, onClose }) {
       <aside className={`md${open ? ' show' : ''}`} id="md" aria-hidden={!open} aria-label="Navigation menu">
         <div className="md-head">
           <a onClick={() => nav('index')} className="logo-a" aria-label="Shubhlabh Express">
-            <div className="logo-pill" style={{ background: '#fff' }}><img src={logo} className="logo-img" alt="" /><div className="logo-txt"><b className="lname" style={{ color: '#0A1628' }}>Shubhlabh Express</b><span className="ltag">Prosperity in Motion</span></div></div>
+            <div className="logo-pill" style={{ background: '#fff' }}><img src={logo} className="logo-img" width="30" height="30" alt="" /><div className="logo-txt"><b className="lname" style={{ color: '#0A1628' }}>Shubhlabh Express</b><span className="ltag">Prosperity in Motion</span></div></div>
           </a>
           <button className="md-close" onClick={onClose} aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg></button>
         </div>

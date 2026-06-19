@@ -1287,3 +1287,7 @@ footer.ft .ft2-logo-tag{color:#00A99D!important}
 footer.ft .ft2-info-ico{color:rgba(0,169,157,0.80)!important}
 footer.ft a:hover,footer.ft button:hover{color:#00D4C5!important}
 
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+

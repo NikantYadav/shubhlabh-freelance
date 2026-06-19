@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="ft-in">
         <div className="ft-top">
           <div className="ft-brand">
-            <div className="ft-logo"><div className="logo-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><img src={logo} alt="SE" style={{ height: 28, width: 28, objectFit: 'contain' }} /><div className="logo-txt"><b className="lname">Shubhlabh Express</b><span className="ltag">Prosperity in Motion</span></div></div></div>
+            <div className="ft-logo"><div className="logo-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><img src={logo} alt="SE" width="28" height="28" style={{ objectFit: 'contain' }} /><div className="logo-txt"><b className="lname">Shubhlabh Express</b><span className="ltag">Prosperity in Motion</span></div></div></div>
             <p className="ft-desc" style={{ color: '#fff' }}>Gurgaon's dedicated B2B distribution &amp; C&amp;F partner — connecting manufacturers with 2,000+ retail touchpoints across Gurgaon NCR. A new age company founded in 2026.</p>
             <div className="ft-contact"><a href="mailto:contact@shublabh.ltd">contact@shublabh.ltd</a><a href="https://shublabh.ltd">shublabh.ltd</a><span>Gurgaon, Haryana 122001</span><span style={{ display: 'flex', alignItems: 'flex-start', gap: 6, marginTop: 4 }}><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2, opacity: .7 }}><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>Plot No 780, Wazirabad, Main Market, Sector 52, Gurugram 122003</span></div>
           </div>
@@ -51,7 +51,7 @@ export function FooterHome() {
       <div className="ft-main">
         <div className="ft2-brand">
           <div className="ft2-logo">
-            <div className="ft2-logo-pill"><img src={logo} className="ft2-logo-img" alt="SE" /></div>
+            <div className="ft2-logo-pill"><img src={logo} className="ft2-logo-img" width="26" height="26" alt="SE" /></div>
             <div><div className="ft2-logo-name">Shubhlabh Express</div><div className="ft2-logo-tag">Prosperity in Motion</div></div>
           </div>
           <p className="ft2-desc">Gurgaon&rsquo;s dedicated B2B distribution &amp; C&amp;F partner &mdash; connecting manufacturers with 2,000+ retail touchpoints across NCR. Founded 2026.</p>

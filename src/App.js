@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import './styles/global.css';
 import Header from './components/Header';
@@ -6,12 +6,13 @@ import MobileTabBar from './components/MobileTabBar';
 import MobileDrawer from './components/MobileDrawer';
 import { MapModalProvider } from './components/MapModal';
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Coverage from './pages/Coverage';
-import Faq from './pages/Faq';
-import Distribute from './pages/Distribute';
-import Legal from './pages/Legal';
+
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Coverage = lazy(() => import('./pages/Coverage'));
+const Faq = lazy(() => import('./pages/Faq'));
+const Distribute = lazy(() => import('./pages/Distribute'));
+const Legal = lazy(() => import('./pages/Legal'));
 
 /* Header hide-on-scroll — port of the scroll listener that toggles `up` on #hdr */
 function useHeaderHide() {
@@ -58,15 +59,17 @@ function Shell() {
     <MapModalProvider>
       <Header hidden={hidden} onToggleDrawer={() => setDrawerOpen((o) => !o)} />
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/coverage" element={<Coverage />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/distribute" element={<Distribute />} />
-        <Route path="/legal" element={<Legal />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/coverage" element={<Coverage />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/distribute" element={<Distribute />} />
+          <Route path="/legal" element={<Legal />} />
+        </Routes>
+      </Suspense>
       <MobileTabBar />
 
       {/* WhatsApp FAB */}
