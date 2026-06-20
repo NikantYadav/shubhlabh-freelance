@@ -15,20 +15,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/defer-css.js",
+    "start": "node scripts/patch-react-router.js && react-scripts start",
+    "build": "node scripts/patch-react-router.js && react-scripts build && node scripts/defer-css.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "node scripts/patch-react-router.js"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
-  },
-  "browser": {
-    "./node_modules/react-router/dist/development/index.js": "./node_modules/react-router/dist/production/index.js",
-    "./node_modules/react-router/dist/development/index.mjs": "./node_modules/react-router/dist/production/index.mjs"
   },
   "browserslist": {
     "production": [
