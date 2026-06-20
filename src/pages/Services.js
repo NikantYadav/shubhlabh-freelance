@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FooterHome } from '../components/Footer';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
+import '../styles/services.css';
 import CfIllustration from '../components/services/CfIllustration';
 import WarehousingIllustration from '../components/services/WarehousingIllustration';
 import PrimaryDistributionIllustration from '../components/services/PrimaryDistributionIllustration';

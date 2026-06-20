@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TruckBand from '../components/TruckBand';
 import { FooterHome } from '../components/Footer';
 import { useMapModal } from '../components/MapModal';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import useParallax from '../hooks/useParallax';
+import '../styles/home.css';
+
+const TruckBand = lazy(() => import('../components/TruckBand'));
 
 export default function Home() {
   const navigate = useNavigate();
@@ -119,7 +121,9 @@ export default function Home() {
         </div>
       </section>
 
-      <TruckBand />
+      <Suspense fallback={<div style={{height:80,background:'#0A1628'}}/>}>
+        <TruckBand />
+      </Suspense>
 
       {/* HOW IT WORKS */}
       <section className="how plx-sect" aria-labelledby="how-heading">

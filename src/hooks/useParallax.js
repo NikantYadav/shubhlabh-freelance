@@ -6,6 +6,23 @@ import { useEffect } from 'react';
 */
 export default function useParallax() {
   useEffect(() => {
+    const scheduleInit = typeof requestIdleCallback !== 'undefined'
+      ? (fn) => requestIdleCallback(fn, { timeout: 2000 })
+      : (fn) => setTimeout(fn, 200);
+
+    let cleanup = null;
+    let unmounted = false;
+    scheduleInit(() => {
+      if (!unmounted) cleanup = init();
+    });
+    return () => {
+      unmounted = true;
+      if (cleanup) cleanup();
+    };
+  }, []);
+}
+
+function init() {
     var hero = document.querySelector('#page-index .hero');
     if (!hero) return;
 
@@ -190,5 +207,4 @@ export default function useParallax() {
         fn();
       });
     };
-  }, []);
 }

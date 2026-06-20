@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FooterHome } from '../components/Footer';
 import { useMapModal } from '../components/MapModal';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
+import '../styles/coverage.css';
 
 export default function Coverage() {
   const navigate = useNavigate();

@@ -38,7 +38,20 @@ export default function Header({ hidden, onToggleDrawer }) {
 
           {/* Logo */}
           <a onClick={() => nav('index')} className="logo-a" aria-label="Shubhlabh Express">
-            <img src="/Shubhlabp Logo.png" className="logo-img-full" alt="Shubhlabh Express" />
+            <picture>
+              <source
+                srcSet="/logo-full.webp 1x, /logo-full@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                src="/Shubhlabp Logo.png"
+                className="logo-img-full"
+                alt="Shubhlabh Express"
+                width="88"
+                height="44"
+                fetchpriority="high"
+              />
+            </picture>
           </a>
 
           {/* Desktop nav links */}

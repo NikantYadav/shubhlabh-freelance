@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FooterHome } from '../components/Footer';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
+import '../styles/legal.css';
 
 const TABS = ['terms', 'privacy', 'shipping', 'refund'];
 

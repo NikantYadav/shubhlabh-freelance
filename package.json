@@ -26,6 +26,10 @@
       "react-app/jest"
     ]
   },
+  "browser": {
+    "./node_modules/react-router/dist/development/index.js": "./node_modules/react-router/dist/production/index.js",
+    "./node_modules/react-router/dist/development/index.mjs": "./node_modules/react-router/dist/production/index.mjs"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
