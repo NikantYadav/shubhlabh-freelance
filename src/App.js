@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import './styles/global.css';
 import Header from './components/Header';
 import MobileTabBar from './components/MobileTabBar';
@@ -13,6 +13,12 @@ const Coverage = lazy(() => import('./pages/Coverage'));
 const Faq = lazy(() => import('./pages/Faq'));
 const Distribute = lazy(() => import('./pages/Distribute'));
 const Legal = lazy(() => import('./pages/Legal'));
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 /* Header hide-on-scroll — port of the scroll listener that toggles `up` on #hdr */
 function useHeaderHide() {
@@ -57,6 +63,7 @@ function Shell() {
 
   return (
     <MapModalProvider>
+      <ScrollToTop />
       <Header hidden={hidden} onToggleDrawer={() => setDrawerOpen((o) => !o)} />
       <MobileDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
       <Suspense fallback={null}>
