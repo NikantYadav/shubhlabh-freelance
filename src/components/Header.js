@@ -38,20 +38,21 @@ export default function Header({ hidden, onToggleDrawer }) {
 
           {/* Logo */}
           <a onClick={() => nav('index')} className="logo-a" aria-label="Shubhlabh Express">
-            <picture>
-              <source
-                srcSet="/logo-full.webp 1x, /logo-full@2x.webp 2x"
-                type="image/webp"
-              />
-              <img
-                src="/Shubhlabp Logo.png"
-                className="logo-img-full"
-                alt="Shubhlabh Express"
-                width="88"
-                height="44"
-                fetchpriority="high"
-              />
-            </picture>
+            <div className="logo-pill" style={{ background: '#fff' }}>
+              <picture>
+                <source srcSet="/logo.webp" type="image/webp" />
+                <img
+                  src="/logo.png"
+                  className="logo-img"
+                  alt="Shubhlabh Express"
+                  fetchpriority="high"
+                />
+              </picture>
+              <div className="logo-txt">
+                <b className="lname" style={{ color: '#0A1628' }}>Shubhlabh Express (P) Limited</b>
+                <span className="ltag">Prosperity in Motion</span>
+              </div>
+            </div>
           </a>
 
           {/* Desktop nav links */}
