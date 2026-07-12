@@ -34,4 +34,4 @@ The site is containerized with Docker:
 
 ## Configuration
 
-The enquiry form requires a few EmailJS credentials (service ID, template ID, public key, and destination email) to be set in a `.env` file before building. See `.env.example` for the required keys. These are provided to the Docker build as build arguments since they get baked into the static site at build time.
+The enquiry form requires a few EmailJS credentials (service ID, template ID, public key, and destination email) to be set in a `.env` file before building. See `.env.example` for the required keys. These are provided to the Docker build as build arguments since they get baked into the static site at build time
