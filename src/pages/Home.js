@@ -310,7 +310,7 @@ export default function Home() {
           <p className="fcta-p r d2">Tell us about your product and distribution requirements. We respond within one business day with a tailored proposal.</p>
           <div className="fcta-btns r d3">
             <a onClick={() => nav('distribute')} className="btn-primary">Hire Us for Your Distribution <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg></a>
-            <a href="mailto:shubhlabh.limited@gmail.com" className="btn-secondary">shubhlabh.limited@gmail.com</a>
+            <a href="mailto:care@shubhlabh.ltd" className="btn-secondary">care@shubhlabh.ltd</a>
           </div>
         </div>
       </section>

@@ -61,7 +61,7 @@ export default function Legal() {
             <div className="lg2-contact-card">
               <div className="lg2-contact-card-t">Policy questions?</div>
               <div className="lg2-contact-card-p">Contact us for any clarification about our terms or policies.</div>
-              <a href="mailto:shubhlabh.limited@gmail.com" style={{ fontSize: 13, fontWeight: 600, color: '#00A99D' }}>shubhlabh.limited@gmail.com</a>
+              <a href="mailto:care@shubhlabh.ltd" style={{ fontSize: 13, fontWeight: 600, color: '#00A99D' }}>care@shubhlabh.ltd</a>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ export default function Legal() {
               </div>
               <div className="lg2-clause">
                 <div className="lg2-clause-hd"><span className="lg2-clause-num">1</span><span className="lg2-clause-title">Company Information</span></div>
-                <p>These Terms &amp; Conditions govern the website and services of <strong>Shubhlabh Express Private Limited</strong>, incorporated under the Companies Act 2013, Gurgaon, Haryana. Website: shublabh.ltd. Email: shubhlabh.limited@gmail.com. By accessing this website or engaging our services, you agree to these Terms.</p>
+                <p>These Terms &amp; Conditions govern the website and services of <strong>Shubhlabh Express Private Limited</strong>, incorporated under the Companies Act 2013, Gurgaon, Haryana. Website: shublabh.ltd. Email: care@shubhlabh.ltd. By accessing this website or engaging our services, you agree to these Terms.</p>
               </div>
               <div className="lg2-clause">
                 <div className="lg2-clause-hd"><span className="lg2-clause-num">2</span><span className="lg2-clause-title">Nature of Services</span></div>
@@ -126,11 +126,11 @@ export default function Legal() {
               </div>
               <div className="lg2-clause">
                 <div className="lg2-clause-hd"><span className="lg2-clause-num">5</span><span className="lg2-clause-title">Your Rights</span></div>
-                <p>You may request access to, correction of, or deletion of your information at <a href="mailto:shubhlabh.limited@gmail.com">shubhlabh.limited@gmail.com</a>. We respond within 30 calendar days.</p>
+                <p>You may request access to, correction of, or deletion of your information at <a href="mailto:care@shubhlabh.ltd">care@shubhlabh.ltd</a>. We respond within 30 calendar days.</p>
               </div>
               <div className="lg2-clause">
                 <div className="lg2-clause-hd"><span className="lg2-clause-num">6</span><span className="lg2-clause-title">Contact</span></div>
-                <p>Privacy matters: <a href="mailto:shubhlabh.limited@gmail.com">shubhlabh.limited@gmail.com</a> &middot; Shubhlabh Express Pvt. Ltd., Gurgaon, Haryana 122001.</p>
+                <p>Privacy matters: <a href="mailto:care@shubhlabh.ltd">care@shubhlabh.ltd</a> &middot; Shubhlabh Express Pvt. Ltd., Gurgaon, Haryana 122001.</p>
               </div>
             </div>
             <div id="lgsec-shipping" className={secCls('shipping')}>
@@ -188,7 +188,7 @@ export default function Legal() {
               </div>
               <div className="lg2-clause">
                 <div className="lg2-clause-hd"><span className="lg2-clause-num">5</span><span className="lg2-clause-title">Contact</span></div>
-                <p>Refund and cancellation queries: <a href="mailto:shubhlabh.limited@gmail.com">shubhlabh.limited@gmail.com</a></p>
+                <p>Refund and cancellation queries: <a href="mailto:care@shubhlabh.ltd">care@shubhlabh.ltd</a></p>
               </div>
             </div>
           </div>
