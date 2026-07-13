@@ -26,8 +26,8 @@ export function FooterHome() {
             <a href="tel:+919319315523" className="ft2-info-row"><svg className="ft2-info-ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.36 8.5a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg><span>+91 93193 15523</span></a>
             <a href="https://shublabh.ltd" target="_blank" rel="noopener noreferrer" className="ft2-info-row"><svg className="ft2-info-ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg><span>shublabh.ltd</span></a>
             <div className="ft2-info-row"><svg className="ft2-info-ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg><span>Plot No 780, Wazirabad, Main Market, Sector 52, Gurugram 122003</span></div>
-            <div className="ft2-info-row"><span>PAN: AFZFS3757G</span></div>
-            <div className="ft2-info-row"><span>GSTN: 06AFZFS3757G1Z9</span></div>
+            <div className="ft2-info-row"><span style={{ width: 12, flexShrink: 0 }} /><span>PAN: AFZFS3757G</span></div>
+            <div className="ft2-info-row"><span style={{ width: 12, flexShrink: 0 }} /><span>GSTN: 06AFZFS3757G1Z9</span></div>
           </div>
           <div className="ft2-social">
             <a href="https://www.linkedin.com/in/shubhlabh-express-private-limited-8a7ba1415/" target="_blank" rel="noopener noreferrer" className="ft2-soc" aria-label="LinkedIn"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></a>
@@ -67,7 +67,7 @@ export function FooterHome() {
       </div>
       <div style={{ borderTop: '1px solid rgba(255,255,255,.06)' }}>
         <div className="ft2-bot">
-          <span className="ft2-copy">&copy; 2026 Shubhlabh Express Pvt. Ltd. All rights reserved.</span>
+          <span className="ft2-copy">&copy; 2026 Shubhlabh Consumer Products. All rights reserved.</span>
           <div className="ft2-bot-links">
             <button className="ft2-bot-link" onClick={() => nav('legal', 'terms')}>Terms</button>
             <button className="ft2-bot-link" onClick={() => nav('legal', 'privacy')}>Privacy</button>

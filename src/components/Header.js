@@ -49,7 +49,7 @@ export default function Header({ hidden, onToggleDrawer }) {
                 />
               </picture>
               <div className="logo-txt">
-                <b className="lname" style={{ color: '#0A1628' }}>Shubhlabh Express (P) Limited</b>
+                <b className="lname" style={{ color: '#0A1628' }}>ShubhLabh Consumer Products</b>
                 <span className="ltag">Prosperity in Motion</span>
               </div>
             </div>
