@@ -5,6 +5,15 @@ IMAGE_NAME="shubhlabh"
 CONTAINER_NAME="shubhlabh"
 DESIRED_PORT_MAPPING="127.0.0.1:8080:80"
 
+FORCE=0
+for arg in "$@"; do
+    case "$arg" in
+        -f|--force)
+            FORCE=1
+            ;;
+    esac
+done
+
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 git fetch origin
@@ -15,7 +24,7 @@ REMOTE=$(git rev-parse @{u})
 CURRENT_PORTS=$(docker inspect -f '{{range $p, $conf := .NetworkSettings.Ports}}{{range $conf}}{{.HostIp}}:{{.HostPort}}->{{$p}}{{end}}{{end}}' "$CONTAINER_NAME" 2>/dev/null || true)
 EXPECTED_PORTS="127.0.0.1:8080->80/tcp"
 
-if [ "$LOCAL" = "$REMOTE" ] && docker image inspect "$IMAGE_NAME:latest" >/dev/null 2>&1 && [ "$CURRENT_PORTS" = "$EXPECTED_PORTS" ]; then
+if [ "$FORCE" -eq 0 ] && [ "$LOCAL" = "$REMOTE" ] && docker image inspect "$IMAGE_NAME:latest" >/dev/null 2>&1 && [ "$CURRENT_PORTS" = "$EXPECTED_PORTS" ]; then
     echo "No changes, image already exists, and container config is up to date. Nothing to do."
     exit 0
 fi
