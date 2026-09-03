@@ -25,7 +25,9 @@
 .tr-item{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.80)}
 .tr-dot{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0}
 .hero-card{background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.1);border-radius:20px;padding:28px;backdrop-filter:blur(16px)}
-@media(max-width:859px){.hero-card{max-width:480px}}
+@media(max-width:859px){.hero-card-wrap{max-width:480px}}
+.hero-card-wrap{position:relative;margin-top:40px}
+.hc-partner-img{position:absolute;right:24px;bottom:100%;margin-bottom:16px;width:38%;border-radius:10px;display:block;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:2}
 .hc-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.78);text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px}
 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .metric{padding:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:all .2s;overflow:hidden;position:relative}
@@ -179,7 +181,7 @@
 .plx-orb2{width:min(500px,60vw);height:min(500px,60vw);bottom:-20%;left:-8%;background:radial-gradient(circle,rgba(74,188,245,.09) 0%,transparent 65%);filter:blur(50px)}
 .plx-orb3{width:min(300px,40vw);height:min(300px,40vw);top:30%;right:20%;background:radial-gradient(circle,rgba(0,169,157,.06) 0%,transparent 70%);filter:blur(30px)}
 #plxCanvas{position:absolute;inset:0;pointer-events:none;opacity:.55;z-index:0}
-.hero-text,.hero-card{will-change:transform}
+.hero-text,.hero-card-wrap{will-change:transform}
 .plx-sect{position:relative;overflow:hidden}
 .plx-sect-bg{position:absolute;inset:-15%;background-size:cover;background-position:center;will-change:transform;pointer-events:none;z-index:0}
 .plx-sect-bg-teal{background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(0,169,157,.06) 0%,transparent 70%)}
@@ -193,7 +195,7 @@
   .hero{padding:56px 16px 48px}
   .hero-in{grid-template-columns:1fr;gap:32px}
   .hero-text{order:1}
-  .hero-card{order:2;max-width:100%}
+  .hero-card-wrap{order:2;max-width:100%}
   .hero-ai-tag{flex-wrap:wrap;gap:8px}
   .hero-tagline{font-size:11px}
   .metrics{grid-template-columns:1fr 1fr}
