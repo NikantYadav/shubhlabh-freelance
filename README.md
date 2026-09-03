@@ -1,6 +1,6 @@
 # Shubhlabh Express — Website
 
-Marketing website for Shubhlabh Express, a Gurgaon-based distribution / C&F partner. The site introduces the business, lists services and coverage areas, and lets prospective brands submit a distribution enquiry form.
+Marketing website for Shubhlabh Express, a Gurgaon based distribution / C&F partner. The site introduces the business, lists services and coverage areas, and lets prospective brands submit a distribution enquiry form.
 
 ## Pages
 
