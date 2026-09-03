@@ -28,6 +28,7 @@
 @media(max-width:859px){.hero-card-wrap{max-width:480px}}
 .hero-card-wrap{position:relative;margin-top:40px}
 .hc-partner-img{position:absolute;right:24px;bottom:100%;margin-bottom:16px;width:38%;border-radius:10px;display:block;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:2}
+.hc-partner-img-mobile{display:none}
 .hc-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.78);text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px}
 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .metric{padding:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:all .2s;overflow:hidden;position:relative}
@@ -192,10 +193,12 @@
 
 /* Mobile responsive overrides for home */
 @media(max-width:767px){
-  .hero{padding:56px 16px 48px}
+  .hero{padding:24px 16px 48px}
   .hero-in{grid-template-columns:1fr;gap:32px}
   .hero-text{order:1}
   .hero-card-wrap{order:2;max-width:100%}
+  .hc-partner-img{display:none}
+  .hc-partner-img-mobile{display:block;width:100%;max-width:280px;margin:0 0 16px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
   .hero-ai-tag{flex-wrap:wrap;gap:8px}
   .hero-tagline{font-size:11px}
   .metrics{grid-template-columns:1fr 1fr}

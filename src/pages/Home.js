@@ -27,6 +27,11 @@ export default function Home() {
         <div className="hero-grid" aria-hidden="true"></div>
         <div className="hero-in">
           <div className="hero-text">
+            <img
+              src="/shubhlabh-coca-cola.png"
+              alt="Shubhlabh Express partnership with Coca-Cola"
+              className="hc-partner-img-mobile"
+            />
             <div className="hero-badge r">
               <div className="hero-tag-row">
                 <span className="hb-dot"></span>
